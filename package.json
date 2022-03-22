@@ -19,5 +19,8 @@
 	"homepage": "https://github.com/woowacourse/jsdoc-boilerplate#readme",
 	"devDependencies": {
 		"jsdoc": "^3.6.10"
+	},
+	"dependencies": {
+		"npm": "^8.5.5"
 	}
 }

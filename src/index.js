@@ -1,51 +1,26 @@
+// @author Movie
+// @author Harry
+
 /**
- * Represents a book.
+ * Buy drinks.
  * @constructor
- * @param {string} title - The title of the book.
- * @param {string} author - The author of the book.
+ * @see {@link https://techcourse.woowahan.com/s/dSWvXWYI/ls/f9hI3wM3|LMS}
+ * @see {@link https://github.com/woowacourse/javascript-vendingmachine|GitHub}
  */
-function Book(title, author) {}
+ function VendingMachine() {}
 
-/**
- * Both of these will link to the bar function.
- * @see {@link bar}
- * @see bar
- */
-function foo() {}
-
-// Use the inline {@link} tag to include a link within a free-form description.
-/**
- * @see {@link foo} for further information.
- * @see {@link http://github.com|GitHub}
- */
-function bar() {}
-
-/**
- * Generic dairy product.
- * @constructor
- */
-function DairyProduct() {}
-
-/**
- * Check whether the dairy product is solid at room temperature.
- * @abstract
- * @return {boolean}
- */
-DairyProduct.prototype.isSolid = function () {
-	throw new Error('must be implemented by subclass!');
-};
-
-/**
- * Cool, refreshing milk.
- * @constructor
- * @augments DairyProduct
- */
-function Milk() {}
-
-/**
- * Check whether milk is solid at room temperature.
- * @return {boolean} Always returns false.
- */
-Milk.prototype.isSolid = function () {
-	return false;
-};
+ /**
+	* Buy americano depending on the price.
+	* If you enter an amount less than 1,000 won, you will get a warm Americano,
+	* and if you enter an amount more than 1,000 won, you will get a cold Americano.
+	* @param {number} inputMoney Money for purchase.
+	* @example <caption>예시</caption>
+	* vendingMachine.getItem(1000);
+	* @example
+	* // === 아이스 아메리카노(1/10개)를 1000원에 구매했습니다. ===
+	* vendingMachine.getItem(900);
+	* @example
+	* // === 따뜻한 아메리카노(1/5개)를 900원에 구매했습니다. ===
+	* @see VendingMachine
+	*/
+ VendingMachine.prototype.getItem = function (inputMoney) {};
